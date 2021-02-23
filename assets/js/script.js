@@ -1,3 +1,5 @@
+// Работа аккордеона
+
 let acc = document.getElementsByClassName("question__accordion-btn");
 
 for (let i = 0; i < acc.length; i++) {
@@ -16,9 +18,7 @@ for (let i = 0; i < acc.length; i++) {
 }
 
 
-
-
-
+// замена цены 
 
 const arrCounter = [[200, 400, 800],[600, 1200, 2400],[1200, 2400, 4800],[2400, 4800, 9600]];
 
@@ -35,7 +35,7 @@ tabLinks.forEach((item, index) => {
     item.classList.toggle("active-tabs");
     
     itemCount.forEach((item, index) => {
-      item.textContent = `${arrCounter[btnIndex][index]}р`
+      item.textContent = `${arrCounter[btnIndex][index]}`
     })
 
     countMouth.forEach(item => {
@@ -46,15 +46,12 @@ tabLinks.forEach((item, index) => {
 });
 
 
+// открытие.закрытие раздела
 
-
-
-
-
+let choiceBtn = document.querySelectorAll('.choice__btn')
+let choiceContainer = document.querySelectorAll(".choice__container");
 
 function openForWhom(evt, ForWhom) {
-  let choiceBtn = document.querySelectorAll('.choice__btn')
-  let choiceContainer = document.querySelectorAll(".choice__container");
   
   choiceBtn.forEach(item => {
     item.addEventListener('click', () => {
@@ -66,7 +63,6 @@ function openForWhom(evt, ForWhom) {
     })
   });
 
-
   for (let i = 0; i < choiceContainer.length; i++) {
     choiceContainer[i].style.display = "none";
   }
@@ -77,10 +73,18 @@ function openForWhom(evt, ForWhom) {
 document.getElementById("defaultOpen").click();
 
 
+// открытие раздела в футере
+
+let footerNavLink = document.querySelectorAll('.footer__nav-link');
+
+footerNavLink.forEach((item, index) => {
+    item.addEventListener('click', () => {
+      choiceBtn[index].click();
+    })
+})
 
 
-
-
+// открытие/закрытие бургер меню
 
 const menuIcon = document.querySelector('.header__burger');
 const navbar = document.querySelector('.header__content');
@@ -93,9 +97,7 @@ menuIcon.addEventListener('click', () => {
 })
 
 
-
-
-
+// вставка картинов в кнопки
 
 let arrIcon = ['assets/images/man.png','assets/images/brand.png','assets/images/shopping-bag.png'];
 let btnImg = document.querySelectorAll('.choice__btn-img');
@@ -105,6 +107,7 @@ btnImg.forEach((item, index) => {
 })
 
 
+// плавный переход к ссылкам
 
 const smoothLinks = document.querySelectorAll('a[href^="#"]');
 for (let smoothLink of smoothLinks) {
@@ -118,3 +121,16 @@ for (let smoothLink of smoothLinks) {
         });
     });
 };
+
+
+
+//закрытие бургер меню при нажатии на навлист
+
+let navList = document.querySelectorAll('.nav__list');
+
+navList.forEach(item => {
+  item.addEventListener('click', () => {
+    navbar.classList.remove('change');
+    menuIcon.classList.remove('btn-active');
+  })
+})
