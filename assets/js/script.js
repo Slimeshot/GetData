@@ -102,7 +102,10 @@ menuIcon.addEventListener('click', () => {
 let arrIcon = ['assets/images/man.png','assets/images/brand.png','assets/images/shopping-bag.png'];
 let btnImg = document.querySelectorAll('.choice__btn-img');
 
+console.log(btnImg);
+
 btnImg.forEach((item, index) => {
+  
   item.style.backgroundImage = `url('${arrIcon[index]}')`;
 })
 
