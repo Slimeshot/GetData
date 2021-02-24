@@ -109,19 +109,26 @@ btnImg.forEach((item, index) => {
 
 // плавный переход к ссылкам
 
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
-        e.preventDefault();
-        const id = smoothLink.getAttribute('href');
+// const smoothLinks = document.querySelectorAll('a[href^="#"]');
+// for (let smoothLink of smoothLinks) {
+//     smoothLink.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         const id = smoothLink.getAttribute('href');
 
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-};
+//         document.querySelector(id).scrollIntoView({
+//             behavior: 'smooth',
+//             block: 'start'
+//         });
+//     });
+// };
 
+$("a.scroll-to").on("click", function(e){
+  e.preventDefault();
+  var anchor = $(this).attr('href');
+  $('html, body').stop().animate({
+      scrollTop: $(anchor).offset().top - 60
+  }, 700);
+});
 
 
 //закрытие бургер меню при нажатии на навлист
