@@ -636,14 +636,19 @@ body {
 }
 .plan__tabs {
     display: flex;
-    border: 0.75px solid #989898;
+    /* border: 0.75px solid #989898; */
     border-radius: 5px;
     margin-bottom: 40px;
     align-items: center;
     border-radius: 5px;
+    
 }
 .tabs-links {
-    border: 0.75px solid #989898;
+    
+    border-bottom: 1.5px solid #989898;
+    border-top: 1.5px solid #989898;
+    border-left: 0.75px solid #989898;
+    border-right: 0.75px solid #989898;
     padding: 11px 20px;
     /* width: 113px; */
     background-color: #ffffff;
@@ -661,10 +666,14 @@ body {
     border-radius: 0 5px 5px 0;
 }
 
-.active-tabs {
+.tabs-links.active-tabs {
+    border: none;
+    border-radius: 5px;
+    transform: scale(1.1);
     background: #FF7B1B;
-    color: #FFFFFF;
+    color: #FFFFFF; 
 }
+
 /* .tabs-links:hover {
     background: #FF7B1B;
     color: #FFFFFF;
@@ -1658,7 +1667,10 @@ line-height: 20px;
         font-size: 20px;
     }
     .tabs-links {
-        padding: 5px 10px;
+        padding: 5px 24px;
+    }
+    .tabs-links:nth-child(4) {
+        padding: 14px 24px 13px 24px;
     }
     /* benefit */
     .benefit__title  {
