@@ -48,7 +48,7 @@ tabLinks.forEach((item, index) => {
 
 // открытие.закрытие раздела
 
-let choiceBtn = document.querySelectorAll('.choice__btn')
+let choiceBtn = document.querySelectorAll('.choice__btn-content')
 let choiceContainer = document.querySelectorAll(".choice__container");
 
 function openForWhom(evt, ForWhom) {
@@ -56,9 +56,9 @@ function openForWhom(evt, ForWhom) {
   choiceBtn.forEach(item => {
     item.addEventListener('click', () => {
       choiceBtn.forEach(elem => {
-        elem.classList.remove('choice__btn-active')
+        elem.classList.remove('choice__btn-content-active')
       });
-      item.classList.toggle("choice__btn-active");
+      item.classList.toggle("choice__btn-content-active");
     
     })
   });
@@ -67,7 +67,7 @@ function openForWhom(evt, ForWhom) {
     choiceContainer[i].style.display = "none";
   }
   document.getElementById(ForWhom).style.display = "block";
-  evt.currentTarget.className += " choice__btn-active";
+  evt.currentTarget.className += " choice__btn-content-active";
   
 }
 document.getElementById("defaultOpen").click();
