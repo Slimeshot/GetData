@@ -646,12 +646,11 @@ body {
     
 }
 .tabs-links {
-    
     border-bottom: 1.5px solid #989898;
     border-top: 1.5px solid #989898;
     border-left: 0.75px solid #989898;
     border-right: 0.75px solid #989898;
-    padding: 11px 20px;
+    padding: 11px 23px 10px 23px;
     /* width: 113px; */
     background-color: #ffffff;
     font-weight: 400;
@@ -661,16 +660,20 @@ body {
     /* transition: 0.2s; */
 }
 .tabs-links:nth-child(1) {
+    border-left: 1.5px solid #989898;
     border-radius: 5px 0 0 5px;
 }
 
 .tabs-links:nth-child(4) {
+    padding: 11px 35px 10px 35px;
+    border-right: 1.5px solid #989898;
     border-radius: 0 5px 5px 0;
 }
 
 .tabs-links.active-tabs {
     border: none;
     border-radius: 5px;
+    font-weight: 600;
     transform: scale(1.1);
     background: #FF7B1B;
     color: #FFFFFF; 
@@ -1675,6 +1678,7 @@ line-height: 20px;
         font-size: 20px;
     }
     .tabs-links {
+        font-size: 13px;
         padding: 5px 10px;
     }
     .tabs-links:nth-child(4) {
