@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GetData</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <body>
+
+   <header class="header">
+     <div class="container">
+       <div class="header__row">
+         <div class="header__logo">
+            <a href="#"><img src="assets/images/logo.png" alt="Logo">  </a>
+         </div>
+         <div class="header__burger">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+            <div class="line line 3"></div>
+          </div>
+         <div class="header__content">
+            <ul class="header__nav">
+              <li class="nav__list"><a href="#services" class="nav__link scroll-to">Наши услуги</a></li>
+              <li class="nav__list"><a href="#price" class="nav__link scroll-to">Тарифы</a></li>
+              <li class="nav__list"><a href="#aboutus" class="nav__link scroll-to">О GetData</a></li>
+            </ul>
+            <div class="header__contacts">
+              <div class="contacts-item">
+                <img src="assets/images/tel.png" alt="tel">
+                <a href="tel:+78007758067" class="contacts__link">88007758067</a>
+              </div>
+              <div class="contacts-item">
+                <img src="assets/images/mail.png" alt="mail">
+                <a href="mailto:getdata@mail.ru" class="contacts__link">getdata@mail.ru</a>
+              </div> 
+            </div>
+            <div class="header__singup">
+              <a href="" class="signup__link">Войти</a>
+              <a href="" class="signup__link btn header-btn">Попробовать бесплатно</a>
+            </div>
+          </div>
+       </div>
+     </div>
+   </header>
+
+   <section class="intro">
+     <div class="container">
+       <div class="intro__content">
+          <div class="intro__text">
+            <h1 class="intro__title">Постройте высокодоходный бизнес на Wildberries</h1>
+            <p class="intro__subtitle">Найдите самые выгодные товары для продаж на основе аналитики:</p>
+            <ul class="intro__list">
+              <li class="intro__list-item">
+                <div class="intro__list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="intro__list-description">Исследуйте новые прибыльные ниши
+                </span>
+              </li>
+              <li class="intro__list-item">
+                <div class="intro-list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="intro__list-description">Находите товары с высоким спросом</span>
+              </li>
+              <li class="intro__list-item">
+                <div class="intro-list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="intro__list-description">Следите за продажами и ценами конкурентов</span>
+              </li>
+              <li class="intro__list-item">
+                <div class="intro-list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="intro__list-description">Принимайте верные решения и стройте прибыльный бизнеc
+                </span>
+              </li>
+            </ul>
+            <a href="#" class="intro__link-item">Начать</a>
+            
+          </div>
+          <div class="intro__img">
+            <img src="assets/images/introimg.png" alt="introimg">
+          </div>
+       </div>
+     </div>
+   </section>
+
+  <section class="choice" id="services">
+    <div class="container">
+      <div class="choice__for-whom">
+        <div class="choice__btn">
+          <div class="choice__btn-content" onclick="openForWhom(event, 'Seller')" id="defaultOpen">
+            <div class="choice__btn-img">
+            </div>
+            <div class="choice__btn-text">Для продавцов</div>
+          </div>
+        </div>
+        <div class="choice__btn">
+          <div class="choice__btn-content" onclick="openForWhom(event, 'Manufacturer')">
+            <div class="choice__btn-img">
+            </div>
+            <div class="choice__btn-text">Для производителей и представителей брендов</div>
+          </div>
+        </div>
+        <div class="choice__btn">
+          <div class="choice__btn-content" onclick="openForWhom(event, 'Market')">
+            <div class="choice__btn-img">
+            </div>
+            <div class="choice__btn-text">Для интернет-магазинов</div>
+          </div>
+        </div>
+        <!-- <button class="choice__btn" onclick="openForWhom(event, 'Seller')" id="defaultOpen">Для продавцов <div class="choice__btn-img"></div></button>
+        <button class="choice__btn" onclick="openForWhom(event, 'Manufacturer')">Для производителей и представителей брендов <div class="choice__btn-img"></div></button>
+        <button class="choice__btn" onclick="openForWhom(event, 'Market')">Для интернет-магазинов <div class="choice__btn-img"></div></button> -->
+      </div>
+    
+
+      <div class="choice__container" id="Seller">
+        <div class="choice__content">
+          <div class="choice__text">
+            <h2 class="choice__title">Выбор правильно продукта - это 80% успеха продаж на Wildberries </h2>
+            <p class="choice__subtitle">Найдите перспективный товар для продажи на Wildberries</p>
+            <ul class="choice__list">
+              <li class="choice__list-item">
+                <div class="choice__list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="choice__list-description">Выберите товар с растущим спросом, с которым вам обеспечен рост продаж.
+                </span>
+              </li>
+              <li class="choice__list-item">
+                <div class="choice-list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="choice__list-description">Создайте его под собственной торговой маркой.</span>
+              </li>
+              <li class="choice__list-item">
+                <div class="choice-list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="choice__list-description">Вырастите из нее успешный бренд.</span>
+              </li>
+              <li class="choice__list-item">
+                <div class="choice-list-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+                <span class="choice__list-description">Получайте доход на Wildberries!
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/graphics-sales.png" alt="graphics-sales">
+          </div>
+        </div>
+  
+  
+        <div class="choice__row">
+          <div class="choice__img choice__img-2">
+            <img src="assets/images/potential.png" alt="graphics-potential">
+          </div> 
+          <div class="choice__subject choice__subject-2">
+            <h3 class="choice__caption">Узнайте потенциал любой ниши или бренда</h3>
+            <p class="choice__desc">Если вы уже знаете, что именно хотите продавать на Wildberries, но не уверены, пользуются ли спросом товары в этой нише, Getdata ответит вам на все вопросы, чтобы принять правильное решение.</p>
+          </div>
+        </div>
+  
+  
+        <div class="choice__row">
+          <div class="choice__subject">
+            <h3 class="choice__caption">Следите за Вашими конкурентами</h3>
+            <p class="choice__desc">Если вы уже торгуете на Wildberries и хотите узнать объем продаж и ценовую политику других продавцов вашего товара, в Getdata вы найдете все эти данные. Проанализировав их, вы сможете понять потенциал вашего роста и выбрать правильную стратегию развития.</p>
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/concurents.png" alt="graphics-potential">
+          </div> 
+        </div>
+  
+        <div class="choice__row">
+          <div class="choice__img choice__img-2">
+            <img src="assets/images/math.png" alt="graphics-potential">
+          </div> 
+          <div class="choice__subject choice__subject-2">
+            <h3 class="choice__caption">Следите за Вашими конкурентами</h3>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vectorb.png" alt="vector"></div>
+              <p class="choice__desc">Рассчитайте объём первой поставки на Wildberries и последующих на базе скорости продаж товаров других продавцов или ваших собственных. </p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vectorb.png" alt="vector"></div>
+              <p class="choice__desc">Проанализируйте продажи конкурентов в разрезе складов, чтобы решить на какой склад лучше отправить поставку.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="choice__container" id="Manufacturer">
+
+        <div class="choice__row">
+          <div class="choice__subject">
+            <h3 class="choice__caption">Следите за динамикой продаж Вашего бизнеса</h3>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Контролируйте динамику объема продаж вашего бренда в разрезе всех категорий, продавцов и товарных позиций</p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Анализируйте спрос и тенденции в вашей нише. </p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Поймите потенциал своего роста и выберите правильную стратегию развития!</p>
+            </div>
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/graphics-sales.png" alt="graphics-sales">
+          </div> 
+        </div>
+        
+        <div class="choice__row">
+          <div class="choice__img choice__img-2">
+            <img src="assets/images/potential.png" alt="graphics-potential">
+          </div> 
+          <div class="choice__subject choice__subject-2">
+            <h3 class="choice__caption">Узнайте потенциал любой ниши или бренда</h3>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Узнайте объём продаж ваших конкурентов на Wildberries в деньгах и штуках, в разрезе товарных позиций и категорий, чтобы понять свои точки роста.</p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Анализируйте их ценовую политику. </p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Узнайте ,какие позиции конкурирующих брендов продаются лучше всего, чтобы понять как расширить свой ассортимент.</p>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="choice__row">
+          <div class="choice__subject">
+            <h3 class="choice__caption">Контролируйте отзывы на Ваши товары</h3>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Контролируйте отзывы на товары вашего бренда. </p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Следите за качеством продукции и доверием к бренду.</p>
+            </div>
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/concurents.png" alt="graphics-potential">
+          </div> 
+        </div>
+  
+        <div class="choice__row">
+          <div class="choice__img choice__img-2">
+            <img src="assets/images/math.png" alt="graphics-potential">
+          </div> 
+          <div class="choice__subject choice__subject-">
+            <h3 class="choice__caption">Рассчитайте объем поставок на основе продаж</h3>
+            <div class="choice__caption-item">
+              <p class="choice__desc">Рассчитайте объём первой поставки на Wildberries и последующих на базе скорости продаж товаров других продавцов или ваших собственных. 
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="choice__row">
+          <div class="choice__subject">
+            <h3 class="choice__caption">Контролируйте РРЦ и Демпинг</h3>
+           <div class="choice__caption-item">
+              <p class="choice__desc">Если вы торгуете на Wildberries через посредников, выявляйте продавцов, которые не соблюдают РРЦ на ваши товары и демпингуют. Ведь может быть вероятность, что кто-то из них купил товар не у вас.</p>
+            </div>
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/concurents.png" alt="graphics-potential">
+          </div> 
+        </div>
+
+
+      </div>
+
+
+      <div class="choice__container" id="Market">
+
+        <div class="choice__row">
+          <div class="choice__subject">
+            <h3 class="choice__caption">Выгружайте цены нужных товаров на Wildberries</h3>
+            <div class="choice__caption-item">
+              <p class="choice__desc">Если ваши товары теперь продаются на Wildberries, Вы сможете выгружать на них цены по API в режиме реального времени, чтобы быстро корректировать свои цены. Возможно в процессе, вы поймете, что на какие-то товары маржа на маркетплейсах просажена настолько, что ими торговать уже не выгодно.</p>
+            </div>
+            
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/graphics-sales.png" alt="graphics-sales">
+          </div> 
+        </div>
+        
+        <div class="choice__row">
+          <div class="choice__img choice__img-2">
+            <img src="assets/images/potential.png" alt="graphics-potential">
+          </div> 
+          <div class="choice__subject choice__subject-2">
+            <h3 class="choice__caption">Следите за рынком и находите свои точки роста</h3>
+            <div class="choice__caption-item">
+              <p class="choice__desc">Находите новые перспективные категории и бренды для продажи в вашем интернет магазине. Оцените потенциал роста продаж по тем брендам и категориям, которые вы уже продаете.</p>
+            </div>
+          </div>
+        </div>
+  
+  
+        <div class="choice__row">
+          <div class="choice__subject">
+            <h3 class="choice__caption">Оцените перспективы Вашего собственного выхода на Wildberries</h3>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Узнайте объём продаж по интересующим вас категориям и брендам на Wildberries. </p>
+            </div>
+            <div class="choice__caption-item">
+              <div class="choice__caption-icon"><img src="assets/images/Vector.png" alt="vector"></div>
+              <p class="choice__desc">Находите товары и ниши с растущим спросом и стройте прибыльный бизнес.</p>
+            </div>
+          </div>
+          <div class="choice__img">
+            <img src="assets/images/concurents.png" alt="graphics-potential">
+          </div> 
+        </div>
+  
+        <div class="choice__row">
+          <div class="choice__img choice__img-2">
+            <img src="assets/images/math.png" alt="graphics-potential">
+          </div> 
+          <div class="choice__subject choice__subject-2">
+            <h3 class="choice__caption">Находите демпингующих продавцов Ваших товаров</h3>
+            <div class="choice__caption-item">
+              <p class="choice__desc">У вас всегда есть возможность понять какой продавец из тех, кто торгует на Wildberries товарами, представленными в вашем интернет магазине, демпингует. Вы можете написать об этом вашему поставщику.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="choice__link"><a href="#" class="choice__link-item">Попробовать бесплатно</a></div>
+    </div>
+  </section>
+
+  <section class="analysis">
+    <div class="container">
+      <div class="analysis__content">
+        <h2 class="analysis__title">Анализируйте продажи, остатки и цены
+          в интересующей вас нише, категории или бренде
+        </h2>
+        <p class="analysis__subtitle">GetData собирает данные о продажах, изменении товарных остатков и изменении цен всех товаров на Wildberries за последние 30 дней. Вы можете посмотреть все эти данные в разрезе нужного вам:</p>
+        <div class="analysis__row">
+          <div class="analysis__row-item">
+            <div class="analysis__row-icon">
+              <img src="assets/images/galochka.png" alt="galka">
+            </div>
+            <span class="analysis__row-desc">Товара</span>
+          </div>
+          <div class="analysis__row-item">
+            <div class="analysis__row-icon">
+              <img src="assets/images/galochka.png" alt="galka">
+            </div>
+            <span class="analysis__row-desc">Продавца</span>
+          </div>
+          <div class="analysis__row-item">
+            <div class="analysis__row-icon">
+              <img src="assets/images/galochka.png" alt="galka">
+            </div>
+            <span class="analysis__row-desc">Бренда</span>
+          </div>
+          <div class="analysis__row-item">
+            <div class="analysis__row-icon">
+              <img src="assets/images/galochka.png" alt="galka">
+            </div>
+            <span class="analysis__row-desc">Категории</span>
+          </div>
+          <div class="analysis__row-item">
+            <div class="analysis__row-icon">
+              <img src="assets/images/galochka.png" alt="galka">
+            </div>
+            <span class="analysis__row-desc">Склада</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="report">
+    <div class="container">
+      <div class="report__content">
+        <h2 class="repotr__title title">
+          Какие отчеты можно посмотреть в Get<span class="text__color">Data</span> и чем они будут вам полезны
+        </h2>
+        <div class="report__row">
+          <div class="report__item">
+            <div class="report__item-img">
+              <img src="assets/images/desc.png" alt="desc">
+            </div>
+            <p class="report__item-title">
+              Отчеты об изменении товарных остатков ваших конкурентов за последние 30 дней
+            </p>
+            <p class="report__item-subtitle">
+              Вы можете увидеть периоды, когда у ваших конкурентов не успевала прийти новая поставка и они были без товаров
+            </p>
+          </div>
+          <div class="report__item">
+            <div class="report__item-img">
+              <img src="assets/images/bag.png" alt="bag">
+            </div>
+            <p class="report__item-title">
+              Оборачиваемость любого товара ваших конкурентов
+            </p>
+            <p class="report__item-subtitle">
+              Вы сможете понять, сколько продают ваши конкуренты в штуках и в цифрах интересующего вас товара, чтобы понять, например, потенциал роста вашего товара
+          </div>
+          <div class="report__item">
+            <div class="report__item-img">
+              <img src="assets/images/arrow.png" alt="arrow">
+            </div>
+            <p class="report__item-title">
+              Объем продаж любого товара, категории, бренда
+            </p>
+            <p class="report__item-subtitle">
+              Вы сможете понять динамику изменения продаж любого товара, категории, бренда, чтобы оценить, в какой нише есть перспективы для роста и принять решение, каким товаром торговать
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="get">
+    <div class="container">
+      <div class="get__content">
+        <h2 class="get__title title">С Get<span class="text__color">Data</span> вы получите</h2>
+        <div class="get__row">
+          <div class="get__item">
+            <div class="get__item-img">
+              <img src="assets/images/file.png" alt="desc">
+            </div>
+            <p class="get__item-title">
+              Экспорт любых отчетов
+            </p>
+            <p class="get__item-subtitle">
+              Выгружайте все нужные вам отчеты из личного кабинета в Формате csv.
+            </p>
+          </div>
+          <div class="get__item">
+            <div class="get__item-img">
+              <img src="assets/images/diagram.png" alt="desc">
+            </div>
+            <p class="get__item-title">
+              Выбор интервала
+            </p>
+            <p class="get__item-subtitle">
+              Вы можете посмотреть аналитику за любой период времени
+            </p>
+          </div>
+          <div class="get__item">
+            <div class="get__item-img">
+              <img src="assets/images/ui-design.png" alt="desc">
+            </div>
+            <p class="get__item-title">
+              Можно быстро перейти на нужный товар
+            </p>
+            <p class="get__item-subtitle">
+              Переходите на страницу любого интересующего товара прямо из панели управления в личном кабинете
+            </p>
+          </div>
+          <div class="get__item">
+            <div class="get__item-img">
+              <img src="assets/images/headphones.png" alt="desc">
+            </div>
+            <p class="get__item-title">
+              Поддержка
+            </p>
+            <p class="get__item-subtitle">
+              Мы c радостью ответим на все интересующие вас вопросы о сервисе и как с ним работать
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="choice__link"><a href="#" class="choice__link-item">Попробовать бесплатно</a></div>
+    </div>
+  </section>
+
+
+  <section class="appraisal">
+    <div class="container">
+      <div class="appraisal__content">
+        <h2 class="appraisal__title">Точная оценка товарных остатков и доходов</h2>
+        <p class="appraisal__subtitle">Точно узнаете, сколько денег зарабатывается:</p>
+        <div class="column__list">
+          <div class="appraisal__column">
+            <div class="appraisal__column-item">
+              <div class="appraisal__column-icon">
+                <img src="assets/images/galochka.png" alt="galka">
+              </div>
+              <span class="appraisal__column-desc">В любой категории</span>
+            </div>
+            <div class="appraisal__column-item">
+              <div class="appraisal__column-icon">
+                <img src="assets/images/galochka.png" alt="galka">
+              </div>
+              <span class="appraisal__column-desc">По любому продавцу</span>
+            </div>
+          </div>
+  
+          <div class="appraisal__column">
+            <div class="appraisal__column-item">
+              <div class="appraisal__column-icon">
+                <img src="assets/images/galochka.png" alt="galka">
+              </div>
+              <span class="appraisal__column-desc">Бренду</span>
+            </div>
+            <div class="appraisal__column-item">
+              <div class="appraisal__column-icon">
+                <img src="assets/images/galochka.png" alt="galka">
+              </div>
+              <span class="appraisal__column-desc">Товару</span>
+            </div>
+          </div>
+  
+          <div class="appraisal__column">
+            <div class="appraisal__column-item">
+              <div class="appraisal__column-icon">
+                <img src="assets/images/galochka.png" alt="galka">
+              </div>
+              <span class="appraisal__column-desc">На каком складе у какого продавца какие остатки</span>
+            </div>
+            <div class="appraisal__column-item">
+              <div class="appraisal__column-icon">
+                <img src="assets/images/galochka.png" alt="galka">
+              </div>
+              <span class="appraisal__column-desc">С какого склада было больше продаж.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="plan" id="price">
+    <div class="container">
+      <div class="plan__content">
+        <h2 class="plan__title title">Выберите удобный тарифный план и начните зарабатывать больше</h2>
+        <div class="plan__tabs">
+          <button class="tabs-links">1 месяц</button>
+          <button class="tabs-links">3 месяца</button>
+          <button class="tabs-links">6 месяцев</button>
+          <button class="tabs-links active-tabs">Год</button>
+        </div>
+        <div class="plan__row-items">
+          <div class="plan__item">
+            <h3 class="item__label">Лайт</h3>
+            <div class="item__text">
+              <div class="item__count-text">
+                <span class="item__count">2400</span>
+                <span class="item__currency">&#8381</span>
+              </div>
+              <span class="count__mouth">/ месяц</span>
+            </div>
+            <div class="item__stick"></div>
+            <ul class="plan__menu">
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Количество баллов на месяц 3000</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Баллов в сутки: не ограничено</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по категориям</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по брендам</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по продавцам</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Просмотр данных за последние 30 суток</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/crest.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Трендовые товары за последний месяц</span>
+              </li>
+            </ul>
+            <a href="#" class="plan__link-item">Попробовать бесплатно</a>
+          </div>
+          <div class="plan__item">
+            <div class="item__nameplate">Популярный</div>
+            <h3 class="item__label">Профи</h3>
+            <div class="item__text">
+              <div class="item__count-text">
+                <span class="item__count">4800</span>
+                <span class="item__currency">&#8381</span>
+              </div>
+              <span class="count__mouth">/ месяц</span>
+            </div>
+            <div class="item__stick"></div>
+            <ul class="plan__menu">
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Количество баллов на месяц 7000</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Баллов в сутки: не ограничено</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по категориям</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по брендам</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по продавцам</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Просмотр данных за последние 30 суток</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/crest.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Трендовые товары за последний месяц</span>
+              </li>
+            </ul>
+            <a href="#" class="plan__link-item">Попробовать бесплатно</a>
+          </div>
+          <div class="plan__item">
+            <h3 class="item__label">Гуру маркетплейсов</h3>
+            <div class="item__text">
+              <div class="item__count-text">
+                <span class="item__count">9600</span>
+                <span class="item__currency">&#8381</span>
+              </div>
+              <span class="count__mouth">/ месяц</span>
+            </div>
+            <div class="item__stick"></div>
+            <ul class="plan__menu">
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Количество баллов на месяц 15000</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Баллов в сутки: не ограничено</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по категориям</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по брендам</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Анализ по продавцам</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Просмотр данных за последние 30 суток</span>
+              </li>
+              <li class="plan_menu-list">
+                <div class="plan_menu-icon">
+                  <img src="assets/images/galochkasmal.png" alt="galka">
+                </div>
+                <span class="plan_menu-text">Трендовые товары за последний месяц</span>
+              </li>
+            </ul>
+            <a href="#" class="plan__link-item">Попробовать бесплатно</a>
+          </div>
+          
+        </div>
+        <p class="plan__desc">При оплате за 3 месяца будет применена дополнительная скидка 10%, при оплате за 6 месяцев – скидка 20%. Подробное описание тарифов опубликовано на этой странице.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="benefit" id="aboutus">
+    <div class="container">
+      <div class="benefit__content">
+        <h2 class="benefit__title title">Кому будет полезна Get<span class="text__color">Data</span></h2>
+        <div class="benefit_row">
+          <div class="benefit__item">
+            <div class="benefit__item-img">
+              <img src="assets/images/newbie.png" alt="src">
+            </div>
+            <h3 class="benefit__item-title">Новичкам</h3>
+            <span class="benefit__item-subtitle">Начинающим продавцам, ищущим
+              с каким товаром выйти на Wildberries</span>
+          </div>
+          <div class="benefit__item">
+            <div class="benefit__item-img">
+              <img src="assets/images/sellers.png" alt="src">
+            </div>
+            <h3 class="benefit__item-title">Продавцам</h3>
+            <span class="benefit__item-subtitle">Всем, кто уже продает на Wildberries ,
+              но ищет новые перспективные товары </span>
+          </div>
+          <div class="benefit__item">
+            <div class="benefit__item-img">
+              <img src="assets/images/proizvod.png" alt="src">
+            </div>
+            <h3 class="benefit__item-title">Производителям</h3>
+            <span class="benefit__item-subtitle">Производителям и представителям брендов, кто ищет новые каналы продаж</span>
+          </div>
+          <div class="benefit__item">
+            <div class="benefit__item-img">
+              <img src="assets/images/market.png" alt="src">
+            </div>
+            <h3 class="benefit__item-title">Интернет-магазинам</h3>
+            <span class="benefit__item-subtitle">Интернет магазинам, чьи товары стали продаваться на Wildberries и вам теперь надо строить ценовую стратегию с оглядкой на Wildberries</span>
+          </div>
+        </div>
+        <div class="benefit__row-btn">
+          <a href="" class="benefit__link">Попробовать бесплатно</a>
+          <button class="benefit__btn">Оставить заявку на демонстрацию</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="data">
+    <div class="container">
+      <div class="data__content">
+        <h2 class="data__title">Get<span class="text__color">Data</span>собирает данные:</h2>
+        <div class="data__row">
+          <div class="data__item">
+            <div class="data__item-img">
+              <img src="assets/images/gift.png" alt="src">
+            </div>
+            <h3 class="data__item-title">С 35 миллионов товаров</h3>
+          </div>
+          <div class="data__item">
+            <div class="data__item-img">
+              <img src="assets/images/warehouse.png" alt="src">
+            </div>
+            <h3 class="data__item-title">С 500000 категорий</h3>
+          </div>
+          <div class="data__item">
+            <div class="data__item-img">
+              <img src="assets/images/brands.png" alt="src">
+            </div>
+            <h3 class="data__item-title">С 500000 брендов</h3>
+          </div>
+          <div class="data__item">
+            <div class="data__item-img">
+              <img src="assets/images/clerk.png" alt="src">
+            </div>
+            <h3 class="data__item-title">С 40000 продавцов</h3>
+          </div>
+        </div>
+        <span class="data__subtitle">Мы обновляем данные ежедневно, чтобы вы в 2 клика смогли получить актуальную информацию!</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="mail">
+    <div class="container">
+      <div class="mail__content">
+        <h2 class="mail__title">Подпишитесь на рассылку</h2>
+        <div class="mail__subtitle">Получайте письма о самых трендовых товарах и нишах на Wildberries</div>
+        <form action="handler.php" method="post" class="mail__form">
+          <input type="email" name="email" placeholder="Введите свой e-mail" required class="mail__form-input">
+          <input type="submit" value="Отправить" class="mail__form-btn">
+          </form>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="question">
+    <div class="container">
+      <div class="question__content">
+        <h2 class="question__title title">Часто задаваемые вопросы:</h2>
+        <div class="question__accordion">
+
+          <button class="question__accordion-btn">Есть ли бесплатная пробная версия для GetData?</button>
+          <div class="question__accordion-panel">
+            <p class="question__accordion-text">Да! У нас есть 7-дневный бесплатный пробный период, в течение которого вы можете изучить и протестировать Amazon SellerApp на свое усмотрение. После пробного периода вы автоматически будете подписаны на план, который выберете в течение пробного периода.</p>
+          </div>
+
+          <button class="question__accordion-btn">Какие страны поддерживает GetData?</button>
+          <div class="question__accordion-panel">
+            <p class="question__accordion-text">Да! У нас есть 7-дневный бесплатный пробный период, в течение которого вы можете изучить и протестировать Amazon SellerApp на свое усмотрение. После пробного периода вы автоматически будете подписаны на план, который выберете в течение пробного периода.</p>
+          </div>
+
+          <button class="question__accordion-btn">Сколько стоит GetData?</button>
+          <div class="question__accordion-panel">
+            <p class="question__accordion-text">Да! У нас есть 7-дневный бесплатный пробный период, в течение которого вы можете изучить и протестировать Amazon SellerApp на свое усмотрение. После пробного периода вы автоматически будете подписаны на план, который выберете в течение пробного периода.</p>
+          </div>
+
+          <button class="question__accordion-btn">Как GetData защищает мои данные? </button>
+          <div class="question__accordion-panel">
+            <p class="question__accordion-text">Да! У нас есть 7-дневный бесплатный пробный период, в течение которого вы можете изучить и протестировать Amazon SellerApp на свое усмотрение. После пробного периода вы автоматически будете подписаны на план, который выберете в течение пробного периода.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__row">
+          <div class="footer__item">
+            <h2 class="footer__title">Get<span class="text__color">Data</span></h2>
+            <span class="footer__subtitle">Выберите самые выгодные товары 
+              для продажи на Wildberries в 1 клик!</span>
+            <span class="footer__name">ИП Клепиков Д.С.</span>
+            <ul class="footer__social-menu">
+              <li class="footer__social-list">
+                <a href="#" class="footer__social-link">
+                  <img src="assets/images/telegram.png" alt="social-link">
+                </a>
+              </li>
+              <li class="footer__social-list">
+                <a href="#" class="footer__social-link">
+                  <img src="assets/images/facebook.png" alt="social-link">
+                </a>
+              </li>
+              <li class="footer__social-list">
+                <a href="#" class="footer__social-link">
+                  <img src="assets/images/youtube.png" alt="social-link">
+                </a>
+              </li>
+              <li class="footer__social-list">
+                <a href="#" class="footer__social-link">
+                  <img src="assets/images/tiktok.png" alt="social-link">
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h2 class="footer__title">Наши услуги</h2>
+            <ul class="footer__nav-menu">
+              <li class="footer__nav-list">
+                <a href="#services" class="footer__nav-link scroll-to">Продавцам</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="#services" class="footer__nav-link scroll-to">Производителям и представителям брендов</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="#services" class="footer__nav-link scroll-to">Интернет-магазинам</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <h2 class="footer__title">Информация</h2>
+            <ul class="footer__nav-menu">
+              <li class="footer__nav-list">
+                <a href="#" class="footer__nav-link">Пользовательское соглашение</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="#" class="footer__nav-link">Политика оплаты и возврата</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="#" class="footer__nav-link">Партнерская программа</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="#" class="footer__nav-link">API документация</a>
+              </li>
+              <li class="footer__nav-list">
+                <a href="#price" class="footer__nav-link">Тарифы</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
