@@ -661,7 +661,7 @@ body {
     
 }
 .tabs-links {
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', sans-serif;
     border-bottom: 1.5px solid #989898;
     border-top: 1.5px solid #989898;
     border-left: 0.75px solid #989898;
